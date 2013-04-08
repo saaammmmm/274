@@ -1,0 +1,40 @@
+package LinearSearch;
+
+public class LinearSearch<T> {
+  private  T integerArray[];
+	public int totalSize = 0;
+	
+	
+	public LinearSearch(int totalSize ) {
+		integerArray = (T [ ]) new Object [totalSize];
+	}
+	
+	public  void initArray(int totalSize, T elem)
+	{	
+		int n = 0;
+		if (n < totalSize)
+		{
+			integerArray[n] = elem;	
+			elem++;
+			initArray(totalSize, elem);
+		}	
+			
+		
+	}
+	
+	public int searchArray(T searchElem, int totalSize)
+	{
+		int index = 0;
+		int retval = 0;
+		if (searchElem == (integerArray[index]))
+		{
+			retval = index;
+		}
+		if (index < totalSize)
+		{
+			index = 1 + searchArray(searchElem, totalSize);
+		}
+		return retval;
+	}
+}
+
