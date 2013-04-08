@@ -1,0 +1,23 @@
+package LinearSearch;
+import java.util.*;
+public class LinearSearchDriver
+{
+  public static void main(String[ ] a) 
+	{
+		Scanner scan = new Scanner(System.in);
+		
+		/******INITIALIZE ARRAY******/
+		System.out.print("Enter a size for the array: ");
+		int arraySize = scan.nextInt();
+		LinearSearch<Integer> integerArray = 
+				new LinearSearch<Integer> (arraySize);
+		integerArray.initArray(arraySize, 0);
+		
+
+		/******SEARCH ARRAY******/
+		System.out.print("What number would you like to search for");
+		int searchInteger = scan.nextInt();
+		System.out.println(integerArray.searchArray(searchInteger, arraySize));
+	}
+
+}
